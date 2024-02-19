@@ -1,0 +1,119 @@
+[
+    {
+        "id": 1,
+        "FirstName": "Gregory",
+        "LastName": "Chapman",
+        "FullName": "Gregory Chapman",
+        "Email": "Gregory_Chapman.@gmail.com",
+        "Salary": 2668638,
+        "created_by": "Kinjal"
+    },
+    {
+        "id": 2,
+        "FirstName": "Michael",
+        "LastName": "Fernandez",
+        "FullName": "Michael Fernandez",
+        "Email": "Michael_Fernandez.@aol.com",
+        "Salary": 1158121,
+        "created_by": "Kinjal"
+    },
+    {
+        "id": 3,
+        "FirstName": "Lois",
+        "LastName": "Price",
+        "FullName": "Lois Price",
+        "Email": "Lois_Price.@yahoo.com",
+        "Salary": 4174984,
+        "created_by": "Kinjal"
+    },
+    {
+        "id": 4,
+        "FirstName": "Lori",
+        "LastName": "Wells",
+        "FullName": "Lori Wells",
+        "Email": "Lori_Wells.@aol.com",
+        "Salary": 4045076,
+        "created_by": "Kinjal"
+    },
+    {
+        "id": 5,
+        "FirstName": "Christina",
+        "LastName": "Morgan",
+        "FullName": "Christina Morgan",
+        "Email": "Christina_Morgan.@hotmail.com",
+        "Salary": 2815360,
+        "created_by": "Kinjal"
+    },
+    {
+        "id": 6,
+        "FirstName": "Ruby",
+        "LastName": "Gray",
+        "FullName": "Ruby Gray",
+        "Email": "Ruby_Gray.@yahoo.com",
+        "Salary": 75140,
+        "created_by": "Kinjal"
+    },
+    {
+        "id": 7,
+        "FirstName": "Carolyn",
+        "LastName": "Diaz",
+        "FullName": "Carolyn Diaz",
+        "Email": "Carolyn_Diaz.@yahoo.com",
+        "Salary": 4988757,
+        "created_by": "Kinjal"
+    },
+    {
+        "id": 8,
+        "FirstName": "Frances",
+        "LastName": "Chapman",
+        "FullName": "Frances Chapman",
+        "Email": "Frances_Chapman.@gmail.com",
+        "Salary": 1726321,
+        "created_by": "Kinjal"
+    },
+    {
+        "id": 9,
+        "FirstName": "Alan",
+        "LastName": "West",
+        "FullName": "Alan West",
+        "Email": "Alan_West.@yahoo.com",
+        "Salary": 3757755,
+        "created_by": "Kinjal"
+    },
+    {
+        "id": 10,
+        "FirstName": "Brenda",
+        "LastName": "Tucker",
+        "FullName": "Brenda Tucker",
+        "Email": "Brenda_Tucker.@hotmail.com",
+        "Salary": 4153344,
+        "created_by": "Kinjal"
+    },
+    {
+        "id": 11,
+        "FirstName": "Jessica",
+        "LastName": "Lawson",
+        "FullName": "Jessica Lawson",
+        "Email": "Jessica_Lawson.@hotmail.com",
+        "Salary": 2773781,
+        "created_by": "Kinjal"
+    },
+    {
+        "id": 12,
+        "FirstName": "Richard",
+        "LastName": "Murphy",
+        "FullName": "Richard Murphy",
+        "Email": "Richard_Murphy.@aol.com",
+        "Salary": 4571217,
+        "created_by": "Kinjal"
+    },
+    {
+        "id": 13,
+        "FirstName": "Kathy",
+        "LastName": "Rogers",
+        "FullName": "Kathy Rogers",
+        "Email": "Kathy_Rogers.@yahoo.com",
+        "Salary": 3113915,
+        "created_by": "Kinjal"
+    }
+]

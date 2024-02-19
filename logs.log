@@ -1,0 +1,354 @@
+19-02-2024 11:36:49 AM - LOGIC HANDLER   - DEBUG     - temp FOLDER CREATED
+19-02-2024 11:36:49 AM - MAIN            - INFO      - START: MAIN PROGRAM
+19-02-2024 11:36:49 AM - LOGIC HANDLER   - INFO      - START: VALIDATION OF USER INPUT
+19-02-2024 11:36:49 AM - LOGIC HANDLER   - DEBUG     - SUCCESS: FETCHING ARGUMENTS VALUES
+19-02-2024 11:36:49 AM - LOGIC HANDLER   - DEBUG     - PROVIDED VALUES ARE: START_YEAR = 2020, END_YEAR = 2030, SLEEP_TIME = 1
+19-02-2024 11:36:49 AM - LOGIC HANDLER   - INFO      - END: VALIDATION OF USER INPUT
+19-02-2024 11:36:49 AM - MAIN            - INFO      - ARGUMENTS VALIDATION SUCCESS
+19-02-2024 11:36:49 AM - MAIN            - INFO      - STEP 2: SETTING UP CONFIGRATION FILE ACCORDING USER CHOICE
+19-02-2024 11:36:49 AM - MAIN            - DEBUG     - APPLAYING QA CONFIGRATION
+19-02-2024 11:36:49 AM - FILE HANDLING   - DEBUG     - START: FILE CHECKUP
+19-02-2024 11:36:49 AM - FILE HANDLING   - DEBUG     - RECIVED: config/config.json
+19-02-2024 11:36:49 AM - FILE HANDLING   - INFO      - FILE FOUND config/config.json
+19-02-2024 11:36:49 AM - FILE HANDLING   - DEBUG     - END: FILE CHECKUP
+19-02-2024 11:36:49 AM - LOGIC HANDLER   - INFO      - CONFIG FILE LOADED
+19-02-2024 11:36:49 AM - MAIN            - DEBUG     - STEP 3: SETTING UP DATABASE
+19-02-2024 11:36:49 AM - DATABASE        - INFO      - CREATING CONNECTION FOR root@localhost.
+19-02-2024 11:36:49 AM - DATABASE        - DEBUG     - INIT: DATABASE CONNECTION.
+19-02-2024 11:36:49 AM - mysql.connector - DEBUG     - Building SSL context
+19-02-2024 11:36:49 AM - mysql.connector - DEBUG     - Switching to SSL
+19-02-2024 11:36:49 AM - mysql.connector - DEBUG     - SSL has been enabled
+19-02-2024 11:36:49 AM - mysql.connector - DEBUG     - Starting authorization phase
+19-02-2024 11:36:49 AM - mysql.connector - DEBUG     - The provided initial strategy is caching_sha2_password
+19-02-2024 11:36:49 AM - mysql.connector - INFO      - package: mysql.connector.plugins
+19-02-2024 11:36:49 AM - mysql.connector - INFO      - plugin_name: caching_sha2_password
+19-02-2024 11:36:49 AM - mysql.connector - INFO      - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+19-02-2024 11:36:49 AM - mysql.connector - DEBUG     - Exchanging further packets
+19-02-2024 11:36:49 AM - mysql.connector - DEBUG     - caching_sha2_password completed succesfully
+19-02-2024 11:36:49 AM - DATABASE        - INFO      - CONNECTION ESTABLISHED FOR root@localhost
+19-02-2024 11:36:49 AM - DATABASE        - INFO      - CURSOR CREATED
+19-02-2024 11:36:49 AM - LOGIC HANDLER   - INFO      - CREATING DATABASE construction
+19-02-2024 11:36:49 AM - DATABASE        - INFO      - RECIVED QUERRY: CREATE DATABASE IF NOT EXISTS construction 
+19-02-2024 11:36:49 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:36:49 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:36:49 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:36:49 AM - DATABASE        - INFO      - SUCCESS COMMIT: CREATE DATABASE IF NOT EXISTS construction
+19-02-2024 11:36:49 AM - DATABASE        - INFO      - RECIVED QUERRY: USE construction 
+19-02-2024 11:36:49 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:36:49 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:36:49 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:36:49 AM - DATABASE        - INFO      - SUCCESS COMMIT: USE construction
+19-02-2024 11:36:49 AM - MAIN            - DEBUG     - STEP 4: INGESTION
+19-02-2024 11:36:49 AM - LOGIC HANDLER   - INFO      - CREATING REQUIRED TABLES IF NOT EXISTS
+19-02-2024 11:36:49 AM - LOGIC HANDLER   - DEBUG     - CREATING cities TABLE
+19-02-2024 11:36:49 AM - DATABASE        - INFO      - RECIVED QUERRY: CREATE TABLE IF NOT EXISTS cities (id INT AUTO_INCREMENT PRIMARY KEY,name VARCHAR(255),state_id INT,state_code VARCHAR(10),state_name VARCHAR(255),country_name VARCHAR(255),created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,created_by VARCHAR(255)) 
+19-02-2024 11:36:49 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:36:50 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:36:50 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:36:50 AM - DATABASE        - INFO      - SUCCESS COMMIT: CREATE TABLE IF NOT EXISTS cities (id INT AUTO_INCREMENT PRIMARY KEY,name VARCHAR(255),state_id INT,state_code VARCHAR(10),state_name VARCHAR(255),country_name VARCHAR(255),created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,created_by VARCHAR(255))
+19-02-2024 11:36:50 AM - LOGIC HANDLER   - INFO      - CREATED: cities
+19-02-2024 11:36:50 AM - LOGIC HANDLER   - DEBUG     - CREATING project TABLE
+19-02-2024 11:36:50 AM - DATABASE        - INFO      - RECIVED QUERRY: CREATE TABLE IF NOT EXISTS project ( project_id INT AUTO_INCREMENT PRIMARY KEY, project_name VARCHAR(255), location VARCHAR(255), budget VARCHAR(50), StartDate DATE, EndDate DATE, project_duration INT, created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, created_by VARCHAR(255)) 
+19-02-2024 11:36:50 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:36:51 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:36:51 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:36:51 AM - DATABASE        - INFO      - SUCCESS COMMIT: CREATE TABLE IF NOT EXISTS project ( project_id INT AUTO_INCREMENT PRIMARY KEY, project_name VARCHAR(255), location VARCHAR(255), budget VARCHAR(50), StartDate DATE, EndDate DATE, project_duration INT, created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, created_by VARCHAR(255))
+19-02-2024 11:36:51 AM - LOGIC HANDLER   - INFO      - CREATED: project
+19-02-2024 11:36:51 AM - LOGIC HANDLER   - DEBUG     - CREATING employee TABLE
+19-02-2024 11:36:51 AM - DATABASE        - INFO      - RECIVED QUERRY: CREATE TABLE IF NOT EXISTS employee ( id INT AUTO_INCREMENT PRIMARY KEY, FirstName VARCHAR(255), LastName VARCHAR(255), FullName VARCHAR(510), Email VARCHAR(255), Salary DECIMAL(10, 2), created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, created_by VARCHAR(255)) 
+19-02-2024 11:36:51 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:36:52 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:36:52 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:36:52 AM - DATABASE        - INFO      - SUCCESS COMMIT: CREATE TABLE IF NOT EXISTS employee ( id INT AUTO_INCREMENT PRIMARY KEY, FirstName VARCHAR(255), LastName VARCHAR(255), FullName VARCHAR(510), Email VARCHAR(255), Salary DECIMAL(10, 2), created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP, created_by VARCHAR(255))
+19-02-2024 11:36:52 AM - LOGIC HANDLER   - INFO      - CREATED: employee
+19-02-2024 11:36:52 AM - LOGIC HANDLER   - INFO      - recived url is : https://raw.githubusercontent.com/dr5hn/countries-states-cities-database/master/cities.json
+19-02-2024 11:36:52 AM - LOGIC HANDLER   - DEBUG     - START: STORING URL JSON INTO DICT
+19-02-2024 11:36:52 AM - urllib3.connectionpool - DEBUG     - Starting new HTTPS connection (1): raw.githubusercontent.com:443
+19-02-2024 11:36:52 AM - urllib3.connectionpool - DEBUG     - https://raw.githubusercontent.com:443 "GET /dr5hn/countries-states-cities-database/master/cities.json HTTP/1.1" 200 4115041
+19-02-2024 11:36:54 AM - LOGIC HANDLER   - DEBUG     - END: STORING URL JSON INTO DICT
+19-02-2024 11:36:54 AM - LOGIC HANDLER   - DEBUG     - FETCHED RANDOM DATA FROM JSON
+19-02-2024 11:36:54 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO cities (name, state_id, state_code, state_name, country_name, created_by) VALUES ('Kafr Kamm\u0101', 1366, 'Z', 'Northern District', 'Israel', 'Kinjal') 
+19-02-2024 11:36:54 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:36:54 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:36:54 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:36:54 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO cities (name, state_id, state_code, state_name, country_name, created_by) VALUES ('Kafr Kamm\u0101', 1366, 'Z', 'Northern District', 'Israel', 'Kinjal')
+19-02-2024 11:36:54 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(id) FROM cities
+19-02-2024 11:36:54 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:36:54 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO project (project_name, location, budget, StartDate, EndDate, project_duration, created_by) VALUES ('building', 'Kafr Kamm\u0101, Northern District, Israel-1366', '1303567', STR_TO_DATE('19-02-2027', '%d-%m-%Y'), STR_TO_DATE('19-02-2028', '%d-%m-%Y'), 1, 'Kinjal') 
+19-02-2024 11:36:54 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:36:54 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:36:54 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:36:54 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO project (project_name, location, budget, StartDate, EndDate, project_duration, created_by) VALUES ('building', 'Kafr Kamm\u0101, Northern District, Israel-1366', '1303567', STR_TO_DATE('19-02-2027', '%d-%m-%Y'), STR_TO_DATE('19-02-2028', '%d-%m-%Y'), 1, 'Kinjal')
+19-02-2024 11:36:54 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(project_id) FROM project
+19-02-2024 11:36:54 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:36:54 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO employee (FirstName, LastName, FullName, Email, Salary, created_by) VALUES ('Gregory', 'Chapman', 'Gregory Chapman', 'Gregory_Chapman.@gmail.com', 2668638, 'Kinjal') 
+19-02-2024 11:36:54 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:36:54 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:36:54 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:36:54 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO employee (FirstName, LastName, FullName, Email, Salary, created_by) VALUES ('Gregory', 'Chapman', 'Gregory Chapman', 'Gregory_Chapman.@gmail.com', 2668638, 'Kinjal')
+19-02-2024 11:36:54 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(id) FROM employee
+19-02-2024 11:36:54 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:36:55 AM - LOGIC HANDLER   - DEBUG     - FETCHED RANDOM DATA FROM JSON
+19-02-2024 11:36:55 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO cities (name, state_id, state_code, state_name, country_name, created_by) VALUES ('Comuna Ciupercenii Noi', 4742, 'DJ', 'Dolj County', 'Romania', 'Kinjal') 
+19-02-2024 11:36:55 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:36:55 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:36:55 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:36:55 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO cities (name, state_id, state_code, state_name, country_name, created_by) VALUES ('Comuna Ciupercenii Noi', 4742, 'DJ', 'Dolj County', 'Romania', 'Kinjal')
+19-02-2024 11:36:55 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(id) FROM cities
+19-02-2024 11:36:55 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:36:55 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO project (project_name, location, budget, StartDate, EndDate, project_duration, created_by) VALUES ('building', 'Comuna Ciupercenii Noi, Dolj County, Romania-4742', '1328510', STR_TO_DATE('19-02-2022', '%d-%m-%Y'), STR_TO_DATE('19-02-2027', '%d-%m-%Y'), 5, 'Kinjal') 
+19-02-2024 11:36:55 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:36:55 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:36:55 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:36:55 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO project (project_name, location, budget, StartDate, EndDate, project_duration, created_by) VALUES ('building', 'Comuna Ciupercenii Noi, Dolj County, Romania-4742', '1328510', STR_TO_DATE('19-02-2022', '%d-%m-%Y'), STR_TO_DATE('19-02-2027', '%d-%m-%Y'), 5, 'Kinjal')
+19-02-2024 11:36:55 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(project_id) FROM project
+19-02-2024 11:36:55 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:36:55 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO employee (FirstName, LastName, FullName, Email, Salary, created_by) VALUES ('Michael', 'Fernandez', 'Michael Fernandez', 'Michael_Fernandez.@aol.com', 1158121, 'Kinjal') 
+19-02-2024 11:36:55 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:36:55 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:36:55 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:36:56 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO employee (FirstName, LastName, FullName, Email, Salary, created_by) VALUES ('Michael', 'Fernandez', 'Michael Fernandez', 'Michael_Fernandez.@aol.com', 1158121, 'Kinjal')
+19-02-2024 11:36:56 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(id) FROM employee
+19-02-2024 11:36:56 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:36:57 AM - LOGIC HANDLER   - DEBUG     - FETCHED RANDOM DATA FROM JSON
+19-02-2024 11:36:57 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO cities (name, state_id, state_code, state_name, country_name, created_by) VALUES ('Toormina', 3909, 'NSW', 'New South Wales', 'Australia', 'Kinjal') 
+19-02-2024 11:36:57 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:36:57 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:36:57 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:36:57 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO cities (name, state_id, state_code, state_name, country_name, created_by) VALUES ('Toormina', 3909, 'NSW', 'New South Wales', 'Australia', 'Kinjal')
+19-02-2024 11:36:57 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(id) FROM cities
+19-02-2024 11:36:57 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:36:57 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO project (project_name, location, budget, StartDate, EndDate, project_duration, created_by) VALUES ('Infra 1', 'Toormina, New South Wales, Australia-3909', '1265832', STR_TO_DATE('19-02-2022', '%d-%m-%Y'), STR_TO_DATE('19-02-2025', '%d-%m-%Y'), 3, 'Kinjal') 
+19-02-2024 11:36:57 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:36:57 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:36:57 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:36:57 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO project (project_name, location, budget, StartDate, EndDate, project_duration, created_by) VALUES ('Infra 1', 'Toormina, New South Wales, Australia-3909', '1265832', STR_TO_DATE('19-02-2022', '%d-%m-%Y'), STR_TO_DATE('19-02-2025', '%d-%m-%Y'), 3, 'Kinjal')
+19-02-2024 11:36:57 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(project_id) FROM project
+19-02-2024 11:36:57 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:36:57 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO employee (FirstName, LastName, FullName, Email, Salary, created_by) VALUES ('Lois', 'Price', 'Lois Price', 'Lois_Price.@yahoo.com', 4174984, 'Kinjal') 
+19-02-2024 11:36:57 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:36:57 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:36:57 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:36:57 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO employee (FirstName, LastName, FullName, Email, Salary, created_by) VALUES ('Lois', 'Price', 'Lois Price', 'Lois_Price.@yahoo.com', 4174984, 'Kinjal')
+19-02-2024 11:36:57 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(id) FROM employee
+19-02-2024 11:36:57 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:36:58 AM - LOGIC HANDLER   - DEBUG     - FETCHED RANDOM DATA FROM JSON
+19-02-2024 11:36:58 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO cities (name, state_id, state_code, state_name, country_name, created_by) VALUES ('Cockburn Town', 3627, 'SS', 'San Salvador Island', 'The Bahamas', 'Kinjal') 
+19-02-2024 11:36:58 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:36:58 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:36:58 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:36:58 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO cities (name, state_id, state_code, state_name, country_name, created_by) VALUES ('Cockburn Town', 3627, 'SS', 'San Salvador Island', 'The Bahamas', 'Kinjal')
+19-02-2024 11:36:58 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(id) FROM cities
+19-02-2024 11:36:58 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:36:58 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO project (project_name, location, budget, StartDate, EndDate, project_duration, created_by) VALUES ('SmallBuilding', 'Cockburn Town, San Salvador Island, The Bahamas-3627', '1408423', STR_TO_DATE('19-02-2022', '%d-%m-%Y'), STR_TO_DATE('19-02-2024', '%d-%m-%Y'), 2, 'Kinjal') 
+19-02-2024 11:36:58 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:36:58 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:36:58 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:36:58 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO project (project_name, location, budget, StartDate, EndDate, project_duration, created_by) VALUES ('SmallBuilding', 'Cockburn Town, San Salvador Island, The Bahamas-3627', '1408423', STR_TO_DATE('19-02-2022', '%d-%m-%Y'), STR_TO_DATE('19-02-2024', '%d-%m-%Y'), 2, 'Kinjal')
+19-02-2024 11:36:58 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(project_id) FROM project
+19-02-2024 11:36:58 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:36:58 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO employee (FirstName, LastName, FullName, Email, Salary, created_by) VALUES ('Lori', 'Wells', 'Lori Wells', 'Lori_Wells.@aol.com', 4045076, 'Kinjal') 
+19-02-2024 11:36:58 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:36:58 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:36:58 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:36:58 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO employee (FirstName, LastName, FullName, Email, Salary, created_by) VALUES ('Lori', 'Wells', 'Lori Wells', 'Lori_Wells.@aol.com', 4045076, 'Kinjal')
+19-02-2024 11:36:58 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(id) FROM employee
+19-02-2024 11:36:58 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:36:59 AM - LOGIC HANDLER   - DEBUG     - FETCHED RANDOM DATA FROM JSON
+19-02-2024 11:36:59 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO cities (name, state_id, state_code, state_name, country_name, created_by) VALUES ('Ramillies', 1380, 'WAL', 'Wallonia', 'Belgium', 'Kinjal') 
+19-02-2024 11:36:59 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:36:59 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:36:59 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:36:59 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO cities (name, state_id, state_code, state_name, country_name, created_by) VALUES ('Ramillies', 1380, 'WAL', 'Wallonia', 'Belgium', 'Kinjal')
+19-02-2024 11:36:59 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(id) FROM cities
+19-02-2024 11:36:59 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:36:59 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO project (project_name, location, budget, StartDate, EndDate, project_duration, created_by) VALUES ('home', 'Ramillies, Wallonia, Belgium-1380', '1414389', STR_TO_DATE('19-02-2027', '%d-%m-%Y'), STR_TO_DATE('19-02-2029', '%d-%m-%Y'), 2, 'Kinjal') 
+19-02-2024 11:36:59 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:36:59 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:36:59 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:36:59 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO project (project_name, location, budget, StartDate, EndDate, project_duration, created_by) VALUES ('home', 'Ramillies, Wallonia, Belgium-1380', '1414389', STR_TO_DATE('19-02-2027', '%d-%m-%Y'), STR_TO_DATE('19-02-2029', '%d-%m-%Y'), 2, 'Kinjal')
+19-02-2024 11:36:59 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(project_id) FROM project
+19-02-2024 11:36:59 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:36:59 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO employee (FirstName, LastName, FullName, Email, Salary, created_by) VALUES ('Christina', 'Morgan', 'Christina Morgan', 'Christina_Morgan.@hotmail.com', 2815360, 'Kinjal') 
+19-02-2024 11:36:59 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:36:59 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:36:59 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:36:59 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO employee (FirstName, LastName, FullName, Email, Salary, created_by) VALUES ('Christina', 'Morgan', 'Christina Morgan', 'Christina_Morgan.@hotmail.com', 2815360, 'Kinjal')
+19-02-2024 11:36:59 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(id) FROM employee
+19-02-2024 11:36:59 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:37:00 AM - LOGIC HANDLER   - DEBUG     - FETCHED RANDOM DATA FROM JSON
+19-02-2024 11:37:00 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO cities (name, state_id, state_code, state_name, country_name, created_by) VALUES ('Mettmenstetten', 1656, 'ZH', 'Zürich', 'Switzerland', 'Kinjal') 
+19-02-2024 11:37:00 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:37:00 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:37:00 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:37:00 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO cities (name, state_id, state_code, state_name, country_name, created_by) VALUES ('Mettmenstetten', 1656, 'ZH', 'Zürich', 'Switzerland', 'Kinjal')
+19-02-2024 11:37:00 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(id) FROM cities
+19-02-2024 11:37:00 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:37:00 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO project (project_name, location, budget, StartDate, EndDate, project_duration, created_by) VALUES ('SmallBuilding', 'Mettmenstetten, Zürich, Switzerland-1656', '1411862', STR_TO_DATE('19-02-2022', '%d-%m-%Y'), STR_TO_DATE('19-02-2030', '%d-%m-%Y'), 8, 'Kinjal') 
+19-02-2024 11:37:00 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:37:00 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:37:00 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:37:00 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO project (project_name, location, budget, StartDate, EndDate, project_duration, created_by) VALUES ('SmallBuilding', 'Mettmenstetten, Zürich, Switzerland-1656', '1411862', STR_TO_DATE('19-02-2022', '%d-%m-%Y'), STR_TO_DATE('19-02-2030', '%d-%m-%Y'), 8, 'Kinjal')
+19-02-2024 11:37:00 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(project_id) FROM project
+19-02-2024 11:37:00 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:37:00 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO employee (FirstName, LastName, FullName, Email, Salary, created_by) VALUES ('Ruby', 'Gray', 'Ruby Gray', 'Ruby_Gray.@yahoo.com', 75140, 'Kinjal') 
+19-02-2024 11:37:00 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:37:00 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:37:00 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:37:00 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO employee (FirstName, LastName, FullName, Email, Salary, created_by) VALUES ('Ruby', 'Gray', 'Ruby Gray', 'Ruby_Gray.@yahoo.com', 75140, 'Kinjal')
+19-02-2024 11:37:00 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(id) FROM employee
+19-02-2024 11:37:00 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:37:01 AM - LOGIC HANDLER   - DEBUG     - FETCHED RANDOM DATA FROM JSON
+19-02-2024 11:37:01 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO cities (name, state_id, state_code, state_name, country_name, created_by) VALUES ('Rocafort', 1175, 'V', 'Valencia', 'Spain', 'Kinjal') 
+19-02-2024 11:37:01 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:37:01 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:37:01 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:37:01 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO cities (name, state_id, state_code, state_name, country_name, created_by) VALUES ('Rocafort', 1175, 'V', 'Valencia', 'Spain', 'Kinjal')
+19-02-2024 11:37:01 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(id) FROM cities
+19-02-2024 11:37:01 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:37:01 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO project (project_name, location, budget, StartDate, EndDate, project_duration, created_by) VALUES ('home', 'Rocafort, Valencia, Spain-1175', '1489402', STR_TO_DATE('19-02-2025', '%d-%m-%Y'), STR_TO_DATE('19-02-2027', '%d-%m-%Y'), 2, 'Kinjal') 
+19-02-2024 11:37:01 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:37:01 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:37:01 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:37:01 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO project (project_name, location, budget, StartDate, EndDate, project_duration, created_by) VALUES ('home', 'Rocafort, Valencia, Spain-1175', '1489402', STR_TO_DATE('19-02-2025', '%d-%m-%Y'), STR_TO_DATE('19-02-2027', '%d-%m-%Y'), 2, 'Kinjal')
+19-02-2024 11:37:01 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(project_id) FROM project
+19-02-2024 11:37:01 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:37:01 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO employee (FirstName, LastName, FullName, Email, Salary, created_by) VALUES ('Carolyn', 'Diaz', 'Carolyn Diaz', 'Carolyn_Diaz.@yahoo.com', 4988757, 'Kinjal') 
+19-02-2024 11:37:01 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:37:01 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:37:01 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:37:01 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO employee (FirstName, LastName, FullName, Email, Salary, created_by) VALUES ('Carolyn', 'Diaz', 'Carolyn Diaz', 'Carolyn_Diaz.@yahoo.com', 4988757, 'Kinjal')
+19-02-2024 11:37:01 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(id) FROM employee
+19-02-2024 11:37:01 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:37:02 AM - LOGIC HANDLER   - DEBUG     - FETCHED RANDOM DATA FROM JSON
+19-02-2024 11:37:02 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO cities (name, state_id, state_code, state_name, country_name, created_by) VALUES ('Kiischpelt', 1526, 'WI', 'Canton of Wiltz', 'Luxembourg', 'Kinjal') 
+19-02-2024 11:37:02 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:37:02 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:37:02 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:37:02 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO cities (name, state_id, state_code, state_name, country_name, created_by) VALUES ('Kiischpelt', 1526, 'WI', 'Canton of Wiltz', 'Luxembourg', 'Kinjal')
+19-02-2024 11:37:02 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(id) FROM cities
+19-02-2024 11:37:02 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:37:02 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO project (project_name, location, budget, StartDate, EndDate, project_duration, created_by) VALUES ('Big Building', 'Kiischpelt, Canton of Wiltz, Luxembourg-1526', '1350135', STR_TO_DATE('19-02-2027', '%d-%m-%Y'), STR_TO_DATE('19-02-2029', '%d-%m-%Y'), 2, 'Kinjal') 
+19-02-2024 11:37:02 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:37:02 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:37:02 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:37:02 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO project (project_name, location, budget, StartDate, EndDate, project_duration, created_by) VALUES ('Big Building', 'Kiischpelt, Canton of Wiltz, Luxembourg-1526', '1350135', STR_TO_DATE('19-02-2027', '%d-%m-%Y'), STR_TO_DATE('19-02-2029', '%d-%m-%Y'), 2, 'Kinjal')
+19-02-2024 11:37:02 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(project_id) FROM project
+19-02-2024 11:37:02 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:37:02 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO employee (FirstName, LastName, FullName, Email, Salary, created_by) VALUES ('Frances', 'Chapman', 'Frances Chapman', 'Frances_Chapman.@gmail.com', 1726321, 'Kinjal') 
+19-02-2024 11:37:02 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:37:02 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:37:02 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:37:02 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO employee (FirstName, LastName, FullName, Email, Salary, created_by) VALUES ('Frances', 'Chapman', 'Frances Chapman', 'Frances_Chapman.@gmail.com', 1726321, 'Kinjal')
+19-02-2024 11:37:02 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(id) FROM employee
+19-02-2024 11:37:02 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:37:03 AM - LOGIC HANDLER   - DEBUG     - FETCHED RANDOM DATA FROM JSON
+19-02-2024 11:37:03 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO cities (name, state_id, state_code, state_name, country_name, created_by) VALUES ('Medicina-Buda', 1773, '45', 'Emilia-Romagna', 'Italy', 'Kinjal') 
+19-02-2024 11:37:03 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:37:03 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:37:03 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:37:03 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO cities (name, state_id, state_code, state_name, country_name, created_by) VALUES ('Medicina-Buda', 1773, '45', 'Emilia-Romagna', 'Italy', 'Kinjal')
+19-02-2024 11:37:03 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(id) FROM cities
+19-02-2024 11:37:03 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:37:03 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO project (project_name, location, budget, StartDate, EndDate, project_duration, created_by) VALUES ('home', 'Medicina-Buda, Emilia-Romagna, Italy-1773', '1420493', STR_TO_DATE('19-02-2027', '%d-%m-%Y'), STR_TO_DATE('19-02-2028', '%d-%m-%Y'), 1, 'Kinjal') 
+19-02-2024 11:37:03 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:37:03 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:37:03 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:37:03 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO project (project_name, location, budget, StartDate, EndDate, project_duration, created_by) VALUES ('home', 'Medicina-Buda, Emilia-Romagna, Italy-1773', '1420493', STR_TO_DATE('19-02-2027', '%d-%m-%Y'), STR_TO_DATE('19-02-2028', '%d-%m-%Y'), 1, 'Kinjal')
+19-02-2024 11:37:03 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(project_id) FROM project
+19-02-2024 11:37:03 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:37:03 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO employee (FirstName, LastName, FullName, Email, Salary, created_by) VALUES ('Alan', 'West', 'Alan West', 'Alan_West.@yahoo.com', 3757755, 'Kinjal') 
+19-02-2024 11:37:03 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:37:03 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:37:03 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:37:03 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO employee (FirstName, LastName, FullName, Email, Salary, created_by) VALUES ('Alan', 'West', 'Alan West', 'Alan_West.@yahoo.com', 3757755, 'Kinjal')
+19-02-2024 11:37:03 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(id) FROM employee
+19-02-2024 11:37:03 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:37:04 AM - LOGIC HANDLER   - DEBUG     - FETCHED RANDOM DATA FROM JSON
+19-02-2024 11:37:04 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO cities (name, state_id, state_code, state_name, country_name, created_by) VALUES ('Buena Park', 1416, 'CA', 'California', 'United States', 'Kinjal') 
+19-02-2024 11:37:04 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:37:04 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:37:04 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:37:04 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO cities (name, state_id, state_code, state_name, country_name, created_by) VALUES ('Buena Park', 1416, 'CA', 'California', 'United States', 'Kinjal')
+19-02-2024 11:37:04 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(id) FROM cities
+19-02-2024 11:37:04 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:37:04 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO project (project_name, location, budget, StartDate, EndDate, project_duration, created_by) VALUES ('building', 'Buena Park, California, United States-1416', '1414815', STR_TO_DATE('19-02-2028', '%d-%m-%Y'), STR_TO_DATE('19-02-2030', '%d-%m-%Y'), 2, 'Kinjal') 
+19-02-2024 11:37:04 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:37:04 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:37:04 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:37:04 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO project (project_name, location, budget, StartDate, EndDate, project_duration, created_by) VALUES ('building', 'Buena Park, California, United States-1416', '1414815', STR_TO_DATE('19-02-2028', '%d-%m-%Y'), STR_TO_DATE('19-02-2030', '%d-%m-%Y'), 2, 'Kinjal')
+19-02-2024 11:37:04 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(project_id) FROM project
+19-02-2024 11:37:04 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:37:04 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO employee (FirstName, LastName, FullName, Email, Salary, created_by) VALUES ('Brenda', 'Tucker', 'Brenda Tucker', 'Brenda_Tucker.@hotmail.com', 4153344, 'Kinjal') 
+19-02-2024 11:37:04 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:37:04 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:37:04 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:37:04 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO employee (FirstName, LastName, FullName, Email, Salary, created_by) VALUES ('Brenda', 'Tucker', 'Brenda Tucker', 'Brenda_Tucker.@hotmail.com', 4153344, 'Kinjal')
+19-02-2024 11:37:04 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(id) FROM employee
+19-02-2024 11:37:04 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:37:05 AM - LOGIC HANDLER   - DEBUG     - FETCHED RANDOM DATA FROM JSON
+19-02-2024 11:37:05 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO cities (name, state_id, state_code, state_name, country_name, created_by) VALUES ('Traona', 1705, '25', 'Lombardy', 'Italy', 'Kinjal') 
+19-02-2024 11:37:05 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:37:05 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:37:05 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:37:05 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO cities (name, state_id, state_code, state_name, country_name, created_by) VALUES ('Traona', 1705, '25', 'Lombardy', 'Italy', 'Kinjal')
+19-02-2024 11:37:05 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(id) FROM cities
+19-02-2024 11:37:05 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:37:05 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO project (project_name, location, budget, StartDate, EndDate, project_duration, created_by) VALUES ('SmallBuilding', 'Traona, Lombardy, Italy-1705', '1380388', STR_TO_DATE('19-02-2020', '%d-%m-%Y'), STR_TO_DATE('19-02-2030', '%d-%m-%Y'), 10, 'Kinjal') 
+19-02-2024 11:37:05 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:37:05 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:37:05 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:37:05 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO project (project_name, location, budget, StartDate, EndDate, project_duration, created_by) VALUES ('SmallBuilding', 'Traona, Lombardy, Italy-1705', '1380388', STR_TO_DATE('19-02-2020', '%d-%m-%Y'), STR_TO_DATE('19-02-2030', '%d-%m-%Y'), 10, 'Kinjal')
+19-02-2024 11:37:05 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(project_id) FROM project
+19-02-2024 11:37:05 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:37:05 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO employee (FirstName, LastName, FullName, Email, Salary, created_by) VALUES ('Jessica', 'Lawson', 'Jessica Lawson', 'Jessica_Lawson.@hotmail.com', 2773781, 'Kinjal') 
+19-02-2024 11:37:05 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:37:05 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:37:05 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:37:05 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO employee (FirstName, LastName, FullName, Email, Salary, created_by) VALUES ('Jessica', 'Lawson', 'Jessica Lawson', 'Jessica_Lawson.@hotmail.com', 2773781, 'Kinjal')
+19-02-2024 11:37:05 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(id) FROM employee
+19-02-2024 11:37:05 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:37:06 AM - LOGIC HANDLER   - DEBUG     - FETCHED RANDOM DATA FROM JSON
+19-02-2024 11:37:06 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO cities (name, state_id, state_code, state_name, country_name, created_by) VALUES ('Sibulan', 1344, 'BAN', 'Bataan', 'Philippines', 'Kinjal') 
+19-02-2024 11:37:06 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:37:06 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:37:06 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:37:06 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO cities (name, state_id, state_code, state_name, country_name, created_by) VALUES ('Sibulan', 1344, 'BAN', 'Bataan', 'Philippines', 'Kinjal')
+19-02-2024 11:37:06 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(id) FROM cities
+19-02-2024 11:37:06 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:37:06 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO project (project_name, location, budget, StartDate, EndDate, project_duration, created_by) VALUES ('building', 'Sibulan, Bataan, Philippines-1344', '1267534', STR_TO_DATE('19-02-2024', '%d-%m-%Y'), STR_TO_DATE('19-02-2026', '%d-%m-%Y'), 2, 'Kinjal') 
+19-02-2024 11:37:06 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:37:06 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:37:06 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:37:06 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO project (project_name, location, budget, StartDate, EndDate, project_duration, created_by) VALUES ('building', 'Sibulan, Bataan, Philippines-1344', '1267534', STR_TO_DATE('19-02-2024', '%d-%m-%Y'), STR_TO_DATE('19-02-2026', '%d-%m-%Y'), 2, 'Kinjal')
+19-02-2024 11:37:06 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(project_id) FROM project
+19-02-2024 11:37:06 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:37:07 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO employee (FirstName, LastName, FullName, Email, Salary, created_by) VALUES ('Richard', 'Murphy', 'Richard Murphy', 'Richard_Murphy.@aol.com', 4571217, 'Kinjal') 
+19-02-2024 11:37:07 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:37:07 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:37:07 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:37:07 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO employee (FirstName, LastName, FullName, Email, Salary, created_by) VALUES ('Richard', 'Murphy', 'Richard Murphy', 'Richard_Murphy.@aol.com', 4571217, 'Kinjal')
+19-02-2024 11:37:07 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(id) FROM employee
+19-02-2024 11:37:07 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:37:08 AM - LOGIC HANDLER   - DEBUG     - FETCHED RANDOM DATA FROM JSON
+19-02-2024 11:37:08 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO cities (name, state_id, state_code, state_name, country_name, created_by) VALUES ('Furci Siculo', 1709, '82', 'Sicily', 'Italy', 'Kinjal') 
+19-02-2024 11:37:08 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:37:08 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:37:08 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:37:08 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO cities (name, state_id, state_code, state_name, country_name, created_by) VALUES ('Furci Siculo', 1709, '82', 'Sicily', 'Italy', 'Kinjal')
+19-02-2024 11:37:08 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(id) FROM cities
+19-02-2024 11:37:08 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:37:08 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO project (project_name, location, budget, StartDate, EndDate, project_duration, created_by) VALUES ('Infra 1', 'Furci Siculo, Sicily, Italy-1709', '1290303', STR_TO_DATE('19-02-2020', '%d-%m-%Y'), STR_TO_DATE('19-02-2021', '%d-%m-%Y'), 1, 'Kinjal') 
+19-02-2024 11:37:08 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:37:08 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:37:08 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:37:08 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO project (project_name, location, budget, StartDate, EndDate, project_duration, created_by) VALUES ('Infra 1', 'Furci Siculo, Sicily, Italy-1709', '1290303', STR_TO_DATE('19-02-2020', '%d-%m-%Y'), STR_TO_DATE('19-02-2021', '%d-%m-%Y'), 1, 'Kinjal')
+19-02-2024 11:37:08 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(project_id) FROM project
+19-02-2024 11:37:08 AM - DATABASE        - INFO      - FETCHING SUCCESS
+19-02-2024 11:37:08 AM - DATABASE        - INFO      - RECIVED QUERRY: INSERT INTO employee (FirstName, LastName, FullName, Email, Salary, created_by) VALUES ('Kathy', 'Rogers', 'Kathy Rogers', 'Kathy_Rogers.@yahoo.com', 3113915, 'Kinjal') 
+19-02-2024 11:37:08 AM - DATABASE        - DEBUG     - EXECUTING RECIVED QUERRY
+19-02-2024 11:37:08 AM - DATABASE        - INFO      - EXECUTION SUCCESS
+19-02-2024 11:37:08 AM - DATABASE        - DEBUG     - INITITATE COMMIT
+19-02-2024 11:37:08 AM - DATABASE        - INFO      - SUCCESS COMMIT: INSERT INTO employee (FirstName, LastName, FullName, Email, Salary, created_by) VALUES ('Kathy', 'Rogers', 'Kathy Rogers', 'Kathy_Rogers.@yahoo.com', 3113915, 'Kinjal')
+19-02-2024 11:37:08 AM - DATABASE        - DEBUG     - RECIVED: FETCH QUERY SELECT max(id) FROM employee
+19-02-2024 11:37:08 AM - DATABASE        - INFO      - FETCHING SUCCESS

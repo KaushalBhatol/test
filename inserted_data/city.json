@@ -1,0 +1,106 @@
+[
+    {
+        "id": 1,
+        "name": "Kafr Kamm\u0101",
+        "state_id": 1366,
+        "state_code": "Z",
+        "state_name": "Northern District",
+        "country_name": "Israel"
+    },
+    {
+        "id": 2,
+        "name": "Comuna Ciupercenii Noi",
+        "state_id": 4742,
+        "state_code": "DJ",
+        "state_name": "Dolj County",
+        "country_name": "Romania"
+    },
+    {
+        "id": 3,
+        "name": "Toormina",
+        "state_id": 3909,
+        "state_code": "NSW",
+        "state_name": "New South Wales",
+        "country_name": "Australia"
+    },
+    {
+        "id": 4,
+        "name": "Cockburn Town",
+        "state_id": 3627,
+        "state_code": "SS",
+        "state_name": "San Salvador Island",
+        "country_name": "The Bahamas"
+    },
+    {
+        "id": 5,
+        "name": "Ramillies",
+        "state_id": 1380,
+        "state_code": "WAL",
+        "state_name": "Wallonia",
+        "country_name": "Belgium"
+    },
+    {
+        "id": 6,
+        "name": "Mettmenstetten",
+        "state_id": 1656,
+        "state_code": "ZH",
+        "state_name": "Z\u00fcrich",
+        "country_name": "Switzerland"
+    },
+    {
+        "id": 7,
+        "name": "Rocafort",
+        "state_id": 1175,
+        "state_code": "V",
+        "state_name": "Valencia",
+        "country_name": "Spain"
+    },
+    {
+        "id": 8,
+        "name": "Kiischpelt",
+        "state_id": 1526,
+        "state_code": "WI",
+        "state_name": "Canton of Wiltz",
+        "country_name": "Luxembourg"
+    },
+    {
+        "id": 9,
+        "name": "Medicina-Buda",
+        "state_id": 1773,
+        "state_code": "45",
+        "state_name": "Emilia-Romagna",
+        "country_name": "Italy"
+    },
+    {
+        "id": 10,
+        "name": "Buena Park",
+        "state_id": 1416,
+        "state_code": "CA",
+        "state_name": "California",
+        "country_name": "United States"
+    },
+    {
+        "id": 11,
+        "name": "Traona",
+        "state_id": 1705,
+        "state_code": "25",
+        "state_name": "Lombardy",
+        "country_name": "Italy"
+    },
+    {
+        "id": 12,
+        "name": "Sibulan",
+        "state_id": 1344,
+        "state_code": "BAN",
+        "state_name": "Bataan",
+        "country_name": "Philippines"
+    },
+    {
+        "id": 13,
+        "name": "Furci Siculo",
+        "state_id": 1709,
+        "state_code": "82",
+        "state_name": "Sicily",
+        "country_name": "Italy"
+    }
+]

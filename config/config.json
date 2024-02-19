@@ -1,0 +1,31 @@
+{
+    "QA":
+    {
+        "logger_config":{
+            "is_ddl_print":true,
+            "is_dml_print":true
+        },
+        "mysql_config":{
+            "user" : "root",
+            "password" : "12345",
+            "host":"localhost",
+            "port":3306,
+            "database":"construction"
+        }
+    },
+
+    "PROD":
+    {
+        "logger_config":{
+            "is_ddl_print":false,
+            "is_dml_print":false
+        },
+        "mysql_config":{
+            "user" : "root",
+            "password" : "12345",
+            "host":"localhost",
+            "port":3306,
+            "database":"construction"
+        }
+    }
+}
